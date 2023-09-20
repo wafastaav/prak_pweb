@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+.statistik {
+  font-family: "Lexend Deca", sans-serif;
+}
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-pg: hsla(0, 0%, 100%, 0.75);
+  --stats-hd: hsla(0, 0%, 100%, 0.6);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: var(--main-bg);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 70vw;
+  background: var(--card-bg);
+  border-radius: 7px;
+  display: flex;
+}
+.card .deskripsi {
+  padding: 4rem;
+  width: 50%;
+}
+.card .deskripsi h1 {
+  font-size: 2rem;
+}
+.card .deskripsi h1 span {
+  font-size: 2rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+.card .deskripsi p {
+  color: var(--main-pg);
+  margin: 1.5rem 0 3rem 0;
+}
+.card .statistik {
+  display: flex;
+  justify-content: space-between;
+}
+.card .statistik .jumlah {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.card .statistik .nama {
+  text-transform: uppercase;
+  color: var(--stats-hd);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+.card .card-img {
+  border-radius: 0 7px 7px 0;
+  width: 50%;
+  background: linear-gradient(
+      0deg,
+      hsla(277, 64%, 61%, 0.5) 0%,
+      hsla(277, 64%, 61%, 0.5) 100%
+    ),
+    url(images/image-header-desktop.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+  .card {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 90vw;
+    height: 90vh;
+  }
+  .card .deskripsi {
+    width: auto;
+    height: 70%;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .card .statistik {
+    flex-direction: column;
+  }
+  .card .statistik .companies,
+  .card .statistik .templates {
+    margin-bottom: 2rem;
+  }
+  .card .card-img {
+    border-radius: 7px 7px 0 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(
+        0deg,
+        hsla(277, 64%, 61%, 0.5) 0%,
+        hsla(277, 64%, 61%, 0.5) 100%
+      ),
+      url(images/image-header-mobile.jpg) center no-repeat;
+    background-size: cover;
+  }
+}
